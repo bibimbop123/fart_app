@@ -21,6 +21,8 @@ public func configure(_ app: Application) async throws {
     app.migrations.add(CreateTodo())
 
     app.views.use(.leaf)
+    
+    app.middleware.use(FileMiddleware(publicDirectory: app.directory.publicDirectory))
 
     // register routes
     try routes(app)
