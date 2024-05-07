@@ -4,16 +4,34 @@ import Vapor
 func routes(_ app: Application) throws {
     app.get { req -> Response in
     let html = """
-    <html>
-        <body>
+<html>
+    <head>
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                background-color: #f0f0f0;
+                font-family: Arial, sans-serif;
+            }
+            .container {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
             <h1>Welcome to the Fart App!</h1>
             <p>Click the link below to listen to a fart sound.</p>
             <a href="/audio">Listen to audio</a>
             <br/>
-           <img src="/gasleak.jpg" alt="Farting unicorn">
-        </body>
-    </html>
-    """
+            <img src="/gasleak.jpg" alt="Farting unicorn">
+        </div>
+    </body>
+</html>
+"""
     
     var headers = HTTPHeaders()
     headers.add(name: .contentType, value: "text/html")
