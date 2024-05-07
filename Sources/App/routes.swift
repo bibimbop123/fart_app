@@ -15,9 +15,44 @@ func routes(_ app: Application) throws {
                         margin: 0;
                         background-color: #f0f0f0;
                         font-family: Arial, sans-serif;
+                        font-size: 32px;
+                    }
+                    img {
+                        max-width: 100%;
+                        height: auto;
+                        margin-top: 20px;
+
                     }
                     .container {
                         text-align: center;
+                    }
+                    @media (max-width: 600px) {
+                        /* Styles for screens smaller than 600px (like phones) */
+                        body {
+                            font-size: 24px;
+                        }
+                        img {
+                            width: 100%;
+                            max-width: 300px;
+                    }
+                    @media (min-width: 601px) and (max-width: 1024px) {
+                        /* Styles for screens between 601px and 1024px (like tablets) */
+                        body {
+                            font-size: 28px;
+                        }
+                        img {
+                            width: 100%;
+                            max-width: 400px;
+                        }
+                    }
+                    @media (min-width: 1025px) {
+                        /* Styles for screens larger than 1025px (like laptops and desktops) */
+                        body {
+                            font-size: 32px;
+                        }
+                        img {
+                            width: 100%;
+                            max-width: 600px;
                     }
                 </style>
             </head>
