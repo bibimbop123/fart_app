@@ -2,11 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-
   <title>#(title)</title>
 </head>
 
 <body>
   <h1>#(title)</h1>
+  <audio controls>
+    <source src="http://127.0.0.1:8080" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
 </body>
 </html>
