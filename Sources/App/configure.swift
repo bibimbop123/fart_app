@@ -23,7 +23,8 @@ public func configure(_ app: Application) async throws {
     app.views.use(.leaf)
     
     app.middleware.use(FileMiddleware(publicDirectory: app.directory.publicDirectory))
-
+    
+    app.middleware.use(MethodNotAllowedMiddleware())
     // register routes
     try routes(app)
 }
